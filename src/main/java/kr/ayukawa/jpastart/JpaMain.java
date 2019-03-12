@@ -9,7 +9,7 @@ import java.util.List;
 public class JpaMain {
 	public static void main(String[] args) {
 		// 엔티티 매니저 팩토리 생성
-		EntityManagerFactory emf = Persistence.createEntityManagerFactory("jpabook");
+		EntityManagerFactory emf = Persistence.createEntityManagerFactory("jpastart");
 		EntityManager em = emf.createEntityManager();	// 엔티티 매니저 생성
 
 		EntityTransaction tx = em.getTransaction();		// 트랜잭션 기능 획득
