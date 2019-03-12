@@ -11,7 +11,7 @@ configure<JavaPluginConvention> {
 
 var versions = mapOf(
 	"hibernate" to "4.3.10.Final",
-	"h2db" to "1.4.187"
+	"h2db" to "1.4.197"
 )
 
 tasks.withType<JavaCompile> {
