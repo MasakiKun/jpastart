@@ -1,9 +1,7 @@
 package kr.ayukawa.jpastart;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
+import java.util.Date;
 
 @Entity
 @Table(name="MEMBER")
@@ -16,6 +14,18 @@ public class Member {
 	private String username;
 
 	private Integer age;
+
+	@Enumerated(EnumType.STRING)
+	private RoleType roleType;
+
+	@Temporal(TemporalType.TIMESTAMP)
+	private Date createDate;
+
+	@Temporal(TemporalType.TIMESTAMP)
+	private Date lastModified;
+
+	@Lob
+	private String description;
 
 	public String getId() {
 		return id;
@@ -39,5 +49,37 @@ public class Member {
 
 	public void setAge(Integer age) {
 		this.age = age;
+	}
+
+	public RoleType getRoleType() {
+		return roleType;
+	}
+
+	public void setRoleType(RoleType roleType) {
+		this.roleType = roleType;
+	}
+
+	public Date getCreateDate() {
+		return createDate;
+	}
+
+	public void setCreateDate(Date createDate) {
+		this.createDate = createDate;
+	}
+
+	public Date getLastModified() {
+		return lastModified;
+	}
+
+	public void setLastModified(Date lastModified) {
+		this.lastModified = lastModified;
+	}
+
+	public String getDescription() {
+		return description;
+	}
+
+	public void setDescription(String description) {
+		this.description = description;
 	}
 }
