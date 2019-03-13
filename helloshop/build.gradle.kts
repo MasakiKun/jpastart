@@ -11,7 +11,8 @@ configure<JavaPluginConvention> {
 
 var versions = mapOf(
 	"hibernate" to "5.4.1.Final",
-	"h2db" to "1.4.198"
+	"h2db" to "1.4.198",
+	"lombok" to "1.18.6"
 )
 
 tasks.withType<JavaCompile> {
@@ -25,4 +26,5 @@ repositories {
 dependencies {
 	compile("org.hibernate:hibernate-core:${versions["hibernate"]}")
 	compile("com.h2database:h2:${versions["h2db"]}")
+	compileOnly("org.projectlombok:lombok:${versions["lombok"]}")
 }
