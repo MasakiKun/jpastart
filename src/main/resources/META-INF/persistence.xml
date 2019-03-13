@@ -16,6 +16,8 @@
 			<property name="hibernate.use_sql_comments" value="true" />
 			<property name="hibernate.id.new_generator_mappings" value="true" />
 
+			<!-- 테이블 자동 생성 -->
+			<property name="hibernate.hbm2ddl.auto" value="create" />
 		</properties>
 	</persistence-unit>
 </persistence>
