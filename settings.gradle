@@ -1,2 +1,4 @@
 rootProject.name = 'jpa-start'
 
+include "sample-code"		// 각 챕터마다 등장하는 샘플코드
+include "helloshop"			// 4장부터 등장하는 실전 예제
