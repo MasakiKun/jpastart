@@ -14,11 +14,15 @@ public class OrderItem {
 	@Getter @Setter
 	private Long id;
 
+	@ManyToOne
+	@JoinColumn(name="item_id")
 	@Getter @Setter
-	private Long itemId;
+	private Item item;
 
-	@Getter @Setter
-	private Long orderId;
+	@ManyToOne
+	@JoinColumn(name="order_id")
+	@Getter
+	private Order order;
 
 	@Column(name="order_price", nullable=false)
 	@Getter @Setter
@@ -27,4 +31,14 @@ public class OrderItem {
 	@Column(name="count", nullable=false)
 	@Getter @Setter
 	private int count;
+
+	public void setOrder(Order order) {
+		if(this.order != null)
+			this.order.getOrderItems().remove(this);
+
+		if(order != null) {
+			this.order = order;
+			this.order.getOrderItems().add(this);
+		}
+	}
 }
