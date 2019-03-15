@@ -2,7 +2,10 @@
 <persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence" version="2.1">
 	<persistence-unit name="helloshop">
 		<class>kr.ayukawa.jpapractice.model.entity.Member</class>
-		<class>kr.ayukawa.jpapractice.model.entity.Item</class>
+		<class>kr.ayukawa.jpapractice.model.entity.item.Item</class>
+		<class>kr.ayukawa.jpapractice.model.entity.item.Album</class>
+		<class>kr.ayukawa.jpapractice.model.entity.item.Book</class>
+		<class>kr.ayukawa.jpapractice.model.entity.item.Movie</class>
 		<class>kr.ayukawa.jpapractice.model.entity.Order</class>
 		<class>kr.ayukawa.jpapractice.model.entity.OrderItem</class>
 		<class>kr.ayukawa.jpapractice.model.entity.Category</class>

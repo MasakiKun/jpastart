@@ -11,7 +11,7 @@ import java.util.List;
 
 @Entity
 @Table(name="orders")
-public class Order {
+public class Order extends BaseEntity {
 	@Id
 	@GeneratedValue
 	@Column(name="order_id")
@@ -29,7 +29,7 @@ public class Order {
 
 	@OneToOne
 	@JoinColumn(name="delivery_id")
-	@Getter @Setter
+	@Getter //@Setter
 	private Delivery delivery;
 
 //	@Temporal(TemporalType.TIMESTAMP)

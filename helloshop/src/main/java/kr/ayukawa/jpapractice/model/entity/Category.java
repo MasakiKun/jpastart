@@ -1,5 +1,6 @@
 package kr.ayukawa.jpapractice.model.entity;
 
+import kr.ayukawa.jpapractice.model.entity.item.Item;
 import lombok.Getter;
 import lombok.Setter;
 

@@ -1,5 +1,6 @@
-package kr.ayukawa.jpapractice.model.entity;
+package kr.ayukawa.jpapractice.model.entity.item;
 
+import kr.ayukawa.jpapractice.model.entity.Category;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -8,10 +9,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Entity
+@Inheritance(strategy=InheritanceType.SINGLE_TABLE)
+@DiscriminatorColumn(name="DTYPE")
 public class Item {
 	@Id
 	@GeneratedValue
 	@Column(name="item_id")
+	@Getter @Setter
 	private long id;
 
 	@Getter @Setter
