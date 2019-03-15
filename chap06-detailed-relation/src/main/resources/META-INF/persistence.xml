@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence" version="2.1">
 	<persistence-unit name="relation2">
+		<class>kr.ayukawa.jpastart.relation2.entity.manytomany.Member</class>
+		<class>kr.ayukawa.jpastart.relation2.entity.manytomany.Product</class>
+		<class>kr.ayukawa.jpastart.relation2.entity.manytomany.Order</class>
 		<properties>
 			<!-- 필수 속성 -->
 			<property name="javax.persistence.jdbc.driver" value="org.h2.Driver" />
@@ -16,7 +19,7 @@
 			<property name="hibernate.id.new_generator_mappings" value="true" />
 
 			<!-- 테이블 자동 생성 -->
-			<!--<property name="hibernate.hbm2ddl.auto" value="create" />-->
+			<property name="hibernate.hbm2ddl.auto" value="create" />
 			<!-- 이름 매핑 전략 변경 -->
 			<property name="hibernate.ejb.naming_strategy" value="org.hibernate.cfg.ImprovedNamingStrategy" />
 		</properties>
