@@ -27,6 +27,11 @@ public class Order {
 	@Getter @Setter
 	private List<OrderItem> orderItems = new ArrayList<>();
 
+	@OneToOne
+	@JoinColumn(name="delivery_id")
+	@Getter @Setter
+	private Delivery delivery;
+
 //	@Temporal(TemporalType.TIMESTAMP)
 	@Getter @Setter
 	private LocalDateTime orderDate;
@@ -48,5 +53,10 @@ public class Order {
 	public void addOrderItem(OrderItem orderItem) {
 		orderItems.add(orderItem);
 		orderItem.setOrder(this);
+	}
+
+	public void setDelivery(Delivery delivery) {
+		this.delivery = delivery;
+		delivery.setOrder(this);
 	}
 }

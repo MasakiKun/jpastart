@@ -5,6 +5,8 @@
 		<class>kr.ayukawa.jpapractice.model.entity.Item</class>
 		<class>kr.ayukawa.jpapractice.model.entity.Order</class>
 		<class>kr.ayukawa.jpapractice.model.entity.OrderItem</class>
+		<class>kr.ayukawa.jpapractice.model.entity.Category</class>
+		<class>kr.ayukawa.jpapractice.model.entity.Delivery</class>
 		<properties>
 			<!-- 필수 속성 -->
 			<property name="javax.persistence.jdbc.driver" value="org.h2.Driver" />
