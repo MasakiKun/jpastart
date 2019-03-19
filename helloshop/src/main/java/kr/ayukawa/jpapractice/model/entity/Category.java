@@ -27,12 +27,12 @@ public class Category {
 	@Getter @Setter
 	private List<Item> items = new ArrayList<>();
 
-	@ManyToOne
+	@ManyToOne(fetch=FetchType.LAZY)
 	@JoinColumn(name="parent_id")
 	@Getter @Setter
 	private Category parent;
 
-	@OneToMany(mappedBy="parent")
+	@OneToMany(mappedBy="parent", fetch=FetchType.LAZY)
 	@Getter @Setter
 	private List<Category> childs = new ArrayList<>();
 

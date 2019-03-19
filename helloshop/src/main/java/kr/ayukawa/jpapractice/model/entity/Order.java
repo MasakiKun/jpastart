@@ -18,16 +18,16 @@ public class Order extends BaseEntity {
 	@Getter @Setter
 	private Long id;
 
-	@ManyToOne
+	@ManyToOne(fetch=FetchType.LAZY)
 	@JoinColumn(name="member_id")
 	@Getter
 	private Member member;
 
-	@OneToMany(mappedBy="order")
+	@OneToMany(mappedBy="order", cascade=CascadeType.ALL)
 	@Getter @Setter
 	private List<OrderItem> orderItems = new ArrayList<>();
 
-	@OneToOne
+	@OneToOne(cascade=CascadeType.ALL, fetch=FetchType.LAZY)
 	@JoinColumn(name="delivery_id")
 	@Getter //@Setter
 	private Delivery delivery;

@@ -14,7 +14,7 @@ public class Delivery {
 	@Getter @Setter
 	private long id;
 
-	@OneToOne(mappedBy="delivery")
+	@OneToOne(mappedBy="delivery", fetch=FetchType.LAZY)
 	@Getter @Setter
 	private Order order;
 
