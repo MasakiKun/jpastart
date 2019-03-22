@@ -19,14 +19,9 @@ public class Member extends BaseEntity {
 	@Getter @Setter
 	private String name;
 
+	@Embedded
 	@Getter @Setter
-	private String city;
-
-	@Getter @Setter
-	private String street;
-
-	@Getter @Setter
-	private String zipcode;
+	private Address address;
 
 	@OneToMany(mappedBy="member")
 	@Getter @Setter
