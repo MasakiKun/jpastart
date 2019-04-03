@@ -5,3 +5,4 @@ include "helloshop"						// 4장부터 등장하는 실전 예제
 include "chap05-relation-basic"			// 5장 연관관계 매핑 기초
 include "chap06-detailed-relation"		// 6장 다영한 연관관계 매핑
 include "chap07-proxy-and-relation"		// 7장 프록시와 연관관계 관리
+include "chap11-jpa-shop"				// 11. 웹 애플리케이션 제작
